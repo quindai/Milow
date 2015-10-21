@@ -21,13 +21,22 @@
     <!-- your app's js -->
     <script src="js/app.js"></script>
   </head>
-  <body ng-app="starter">
+  <body ng-app="milow">
 
-    <ion-pane>
-      <ion-header-bar class="bar-stable">
-        <h1 class="title">Ionic Blank Starter</h1>
-      </ion-header-bar>
+    <ion-pane id="corpo">
+
+      <!--ion-header-bar class="bar-calm">
+        <h1 class="title">Milow</h1>
+      </ion-header-bar-->
       <ion-content>
+        <div class="card" ng-controller="FillCtrl">
+          <div id="itens" class="item item-text-wrap" ng-repeat="ditado in ditados">
+            <p><b>{{ditado.pt}}</b></p>
+            Original: {{ditado.original}}
+            <br/>Autor: {{ditado.author}}
+            <br/><button class="button button-royal" onclick="window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Minha mensagem', null /* img */, null /* url */, 'Paste it dude!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)})"><i class="icon ion-social-facebook"></i> Partilhe esse pensamento</button><h3>{{ditado.kface}}</h3>
+          </div>
+        </div>
       </ion-content>
     </ion-pane>
   </body>

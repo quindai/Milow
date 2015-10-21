@@ -1,1 +1,18 @@
-/* Empty. Add your own CSS if you like */
+*{
+	font: 300 13px/1.4'Helvetica Neue', Helvetica, Arial;
+}
+
+body{
+	
+}
+
+h3{
+	text-align: right;
+}
+#corpo{
+	background-image: url("../img/bg.jpg");
+}
+
+#itens{
+	background: #f4f7ed;/*#f9f9f9;*/
+}
