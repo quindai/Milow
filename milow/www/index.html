@@ -20,6 +20,7 @@
 
     <!-- your app's js -->
     <script src="js/app.js"></script>
+    <script src="js/admob.js"></script>
   </head>
   <body ng-app="milow">
 
@@ -34,7 +35,9 @@
             <p><b>{{ditado.pt}}</b></p>
             Original: {{ditado.original}}
             <br/>Autor: {{ditado.author}}
-            <br/><button class="button button-royal" onclick="window.plugins.socialsharing.shareViaFacebookWithPasteMessageHint('Minha mensagem', null /* img */, null /* url */, 'Pronto!', function() {console.log('share ok')}, function(errormsg){alert(errormsg)})"><i class="icon ion-social-facebook"></i> Partilhe esse pensamento</button><h3>{{ditado.kface}}</h3>
+            <br/>Partilhe esse pensamento:<br/><a class="button button-outline icon ion-social-facebook button-positive" ng-click="fcbook($index)">acebook</a> <a class="button button-outline icon ion-social-twitter button-calm" ng-click="twitt($index)">Twitter</a> <a class="button button-outline icon ion-social-whatsapp button-balanced" ng-click="whats($index)"> WhatsApp</a>
+            <h3>{{ditado.kface}}</h3>
+            
           </div>
         </div>
       </ion-content>
